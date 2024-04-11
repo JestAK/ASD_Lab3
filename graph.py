@@ -154,11 +154,19 @@ def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, FONT_SIZE, FONT, SQUARE_SIZE, BREA
     vertexCoords = getVertexCoords(VERTEX_AMOUNT, SQUARE_SIZE)
 
     dirMatrix = generateDirMatrix(VERTEX_AMOUNT)
+
+    for row in dirMatrix:
+        print(row)
+
     matrix = dirMatrix
     withArrow = True
 
     if (graphType == "undir"):
         undirMatrix = dirIntoUndirMatrix(dirMatrix)
+
+        for row in undirMatrix:
+            print(row)
+
         matrix = undirMatrix
         withArrow = False
 
