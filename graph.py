@@ -150,7 +150,7 @@ def normVector(ortVector):
     return nVector
 
 
-def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, FONT_SIZE, FONT, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, graphType):
+def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, graphType):
     vertexCoords = getVertexCoords(VERTEX_AMOUNT, SQUARE_SIZE)
 
     dirMatrix = generateDirMatrix(VERTEX_AMOUNT)
@@ -248,6 +248,6 @@ def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, FONT_SIZE, FONT, SQUARE_SIZE, BREA
         if (graphType == "undir" and i == j):
             break
 
-createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, FONT_SIZE, FONT, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, "dir")
+createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, "dir")
 
 turtle.done()
