@@ -155,9 +155,6 @@ def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP,
 
     dirMatrix = generateDirMatrix(VERTEX_AMOUNT)
 
-    for row in dirMatrix:
-        print(row)
-
     matrix = dirMatrix
     withArrow = True
 
@@ -169,6 +166,9 @@ def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP,
 
         matrix = undirMatrix
         withArrow = False
+    else:
+        for row in dirMatrix:
+            print(row)
 
     for i in range(len(vertexCoords)):
         x = vertexCoords[i]["x"]
@@ -248,6 +248,6 @@ def createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP,
         if (graphType == "undir" and i == j):
             break
 
-createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, "dir")
+createGraph(VERTEX_AMOUNT, VERTEX_RADIUS, SQUARE_SIZE, BREAK_GAP, EXTRA_GAP, "undir")
 
 turtle.done()
