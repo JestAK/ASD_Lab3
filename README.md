@@ -7,6 +7,10 @@
 ```
     pip install turtle
 ```
+- copy
+```
+    pip install copy
+```
 
 ## Запуск програми
 1. Перейдіть у директорію з файлом __graph.py__
